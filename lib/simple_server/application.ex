@@ -8,6 +8,7 @@ defmodule SimpleServer.Application do
   @impl true
   def start(_type, _args) do
     SimpleServer.Metrics.PrometheusExporter.setup()
+    SimpleServer.Metrics.HttpCode.setup()
     children = [
       # Starts a worker by calling: SimpleServer.Worker.start_link(arg)
       # {SimpleServer.Worker, arg}
