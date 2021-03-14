@@ -4,6 +4,7 @@ defmodule SimpleServer.Router do
   require Logger
   
   plug(Plug.Logger, log: :debug)
+  plug SimpleServer.Metrics.PrometheusExporter
 
   plug(:match)
 

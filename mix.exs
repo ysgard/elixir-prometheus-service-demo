@@ -25,7 +25,9 @@ defmodule SimpleServer.MixProject do
       {:cowboy, "~> 1.0.0"},
       {:plug_cowboy, "~> 1.0"},
       {:plug, "~> 1.5"},
-      {:poison, "~> 3.1"}
+      {:poison, "~> 3.1"},
+      {:prometheus_ex, "~> 3.0"},
+      {:prometheus_plugs, "~> 1.1"},
     ]
   end
 end
